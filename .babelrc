@@ -1,0 +1,27 @@
+{
+  "presets": [
+    "@babel/preset-react",
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": "last 2 versions"
+        },
+        "loose": true,
+        "modules": false
+      }
+    ]
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "@babel/plugin-proposal-class-properties"
+  ],
+  "env": {
+    "test": {
+      "plugins": ["@babel/plugin-transform-modules-commonjs"]
+    },
+    "server": {
+      "plugins": ["@babel/plugin-transform-modules-commonjs"]
+    }
+  }
+}
